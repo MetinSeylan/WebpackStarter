@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yönetici Girişi</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="dist/build.css"/>
+</head>
+<body class="bg-373452">
+<!-- CONTAINER -->
+<div class="container-fluid">
+    <div class="row">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="col-md-12">
+                <!-- LOGO -->
+                <div class="logo">
+                    <a href="index.php"><img src="dist/img/admin-logo.png" style="width: 150px; margin-top:20px;"
+                                             alt=""/></a>
+                </div>
+                <!-- /LOGO -->
+            </div>
+            <div class="clearfix"></div>
+        </header>
+        <!-- /HEADER -->
+        <!-- LOGIN -->
+        <div class="col-md-12">
+            <div class="login-form">
+                <!-- USER AVATAR -->
+                <div class="user-avatar">
+                    <img src="dist/img/user.png" alt="User Avatar"/>
+                </div>
+                <!-- /USER AVATAR -->
+                <!-- LOGIN FORM -->
+                <div class="form">
+                    <form v-on:submit.prevent="action" method="post">
+                        <div class="inputArea">
+                            <input v-model="email" type="text" class="login-input" name="userMail"
+                                   placeholder="E-Posta"/>
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="inputArea">
+                            <input v-model="password" type="password" class="login-input" name="userPass"
+                                   placeholder="Parola"/>
+                            <i class="fa fa-lock"></i>
+                        </div>
+                        <button type="submit" class="login-btn" style="width:100%;">Giriş
+                            Yap
+                        </button>
+                        <div class="remember">
+                            <input v-model="remember" type="checkbox" id="remember" class="login-remember"/>
+                            <label for="remember">Beni Hatırla</label>
+                        </div>
+                    </form>
+                </div>
+                <!-- /LOGIN FORM -->
+                <!-- LOGIN FOOTER -->
+                <div class="login-footer">
+                    <div class="copy">
+                        <i class="fa fa-rocket"></i>
+                    </div>
+                </div>
+                <!-- /LOGIN FOOTER -->
+            </div>
+        </div>
+        <!-- /LOGIN -->
+    </div>
+</div>
+<!-- /CONTAINER -->
+
+<div class="clearfix"></div>
+<script src="dist/build.js"></script>
+</body>
+</html>
